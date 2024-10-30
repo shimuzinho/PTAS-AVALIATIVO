@@ -1,15 +1,10 @@
 const express = require('express')
 const router = express.Router()
 const controller = require('../Controllers/controller.js')
+const controllerItem = require('../Controllers/itemController.js')
 
 router.get('/', controller.homePage)
 
-router.get('/contato', controller.contatoPage)
-
-router.get('/produtos', controller.produtoPage)
-
-router.get('/about', controller.aboutPage)
-
-router.get('/services', controller.servicesPage)
+router.get('/itens', controllerItem.itemGet)
 
 module.exports = router
