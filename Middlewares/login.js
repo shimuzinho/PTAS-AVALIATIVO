@@ -1,5 +1,6 @@
 const login = (req, res, next) => {
-  console.log(`Usuário acessou ${req.originalUrl}`)
+  const horario = new Date().getTime()
+  console.log(`Usuário acessou ${req.originalUrl}, pelo metodo ${req.method} e no horário ${horario}`)
   next()
 }
 
